@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    color: white; 
+    overflow-y: auto; /* Allow vertical scrolling if content exceeds viewport */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* This ensures the footer sticks to the bottom */
+}
+
+header {
+    background-color: black; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Needed for z-indexing */
+    z-index: 1; /* Ensure header stays on top of other content */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logo-img {
+    width: 50px; 
+    margin-right: 10px;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text i {
+    margin-right: 5px; 
+}
+
+.logo-text span {
+    font-family: 'Helvetica', sans-serif; 
+    font-size: 35px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn,
+nav ul li a {
+    background-color: black;
+    color: white; 
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+nav ul li a:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.05);
+}
+
+.hero {
+    background-image: url('../pictures/background1.jpeg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 200px 0;
+    position: relative; /* Needed for z-indexing */
+    z-index: 0; /* Ensure hero background stays behind other content */
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    max-width: 400px; /* Decreased width */
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 60px; /* Increased margin */
+    position: relative; /* Needed for z-indexing */
+    z-index: 1; /* Ensure content stays on top of the background */
+}
+
+.hero-content h2,
+.hero-content p {
+    color: white;
+    margin-bottom: 50px;
+}
+
+.hero-content form .form-group label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hero-content form input[type="text"],
+.hero-content form input[type="email"],
+.hero-content form textarea {
+    width: 100%;
+    padding: 12px; /* Decrease padding for smaller inputs */
+    border: none;
+    border-radius: 8px; /* Increase border radius for rounded corners */
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 16px; /* Keep font size */
+}
+
+/* Adjust margin-top for the "Email" input */
+.hero-content form input[type="email"] {
+    margin-top: 15px; /* Increase margin-top for more space */
+}
+
+.hero-content form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 45px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.hero-content form button {
+    background-color: red; /* Adjust button color */
+    color: white;
+    padding: 12px 20px; /* Decrease padding for smaller button */
+    border: none;
+    border-radius: 8px; /* Increase border radius for rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content form button:hover {
+    background-color: darkred; /* Adjust hover color */
+}
+
+.features {
+    background-color: black;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.feature {
+    margin-bottom: 40px;
+}
+
+.feature img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    color: red;
+}
+
+.between-footer {
+    display: block;
+    margin: 20px auto; /* Adjust margin as needed */
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* This pushes the footer to the bottom */
+    position: fixed; /* Make the footer fixed */
+    width: 100%; /* Set the width to full */
+    bottom: 0; /* Stick the footer to the bottom */
+    left: 0; /* Align the footer to the left */
+}
