@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZUSCAN - Available IPs</title>
+    <link rel="stylesheet" href="/static/css/scanning.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>  
+    <header>
+        <div class="logo">
+            <img src="/static/pictures/logo1.png" alt="Logo" class="logo-img">
+            <div class="logo-text">
+                <span>ZUSCAN</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>ZUSCAN Available IPs</h2>
+            <form action="/scan_result" method="post">
+                <!-- A label gives a name to the list where users choose an IP. -->
+                <label for="target_ip">Choose an IP to scan</label>
+                <p></p>
+                <br>
+                <!-- A list menu displays available IP options. -->
+                <select id="target_ip" name="target_ip">
+                    <!-- Each IP option is listed in the list. -->
+                </select><br><br>
+                <!-- Change the type of the button to "button" -->
+                <button type="button" id="scan-button">Scan</button>
+            </form>
+        </div>
+    </section>    
+
+    <footer>
+        <p>&copy; 2024 Zuscan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add an event listener to the scan button
+        document.getElementById('scan-button').addEventListener('click', function() {
+            // Redirect to index.html
+            window.location.href = '/index.html';
+        });
+    </script>
+</body>
+</html>
